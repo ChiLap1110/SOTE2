@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Aufgabe5a</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <h1> Aufgabe 5a</h1>
+
+    <input type="text" id="first">
+    <input type="text" id="second">
+
+    <input type="button" id="speichern" value="Speichern" onclick="speichern()" />
+    <input type="button" id="ausgabe" value="Werte ausgeben" onclick="ausgabe()" />
+
+    <div id="ersteLösung">
+        Der Wert der ersten Eingabe lautet:
+    </div>
+
+    <div id="zweiteLösung">
+        Der Wert der zweiten Eingabe lautet:
+    </div>
+
+    <div id="gespeichert1">
+        Der Wert der ersten gespeicherten Eingabe lautet:
+    </div>
+
+    <div id="gespeichert2">
+        Der Wert der zweiten gespeicherten Eingabe lautet:
+    </div>
+
+    <script type="text/javascript">
+
+        //Werte abrufen und sie in Variablen speichern 
+        var y = localStorage.getItem("ersteSpeichern");
+        var z = localStorage.getItem("zweiteSpeichern");
+        $("#gespeichert1").append(y);
+        $("#gespeichert2").append(z);
+
+        function ausgabe() {
+            var ersteAusgabe = document.getElementById("first").value;
+            var zweiteAusgabe = document.getElementById("second").value;
+            $("#ersteLösung").append(ersteAusgabe);
+            $("#zweiteLösung").append(zweiteAusgabe);
+        }
+        function speichern() {
+            //Werte holen
+            var ersteAusgabe = document.getElementById("first").value;
+            var zweiteAusgabe = document.getElementById("second").value;
+
+            //Werte im Storage speichern mit (key,value)
+            localStorage.setItem("ersteSpeichern", ersteAusgabe);
+            localStorage.setItem("zweiteSpeichern", zweiteAusgabe);
+        }
+
+    </script>
+</body>
+
+</html>

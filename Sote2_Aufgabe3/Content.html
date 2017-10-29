@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+    function manipulate(){
+        //Der Wert, den man in das Feld eingibt
+        var newText= document.getElementById("inputtext").value;
+        //Der Knoten der hinzugefügt werden soll (h1)
+        var node = document.createElement("h1");
+        //Knoten erstellen 
+        var textnode = document.createTextNode(newText);
+        //Knoten mit Textknoten verbinden
+        node.appendChild(textnode);
+        document.getElementById("manipulate").appendChild(node);
+
+    }
+
+    function manipulatealternative(){
+        var newText=document.getElementById("inputtext").value;
+        document.getElementById("manipulate").innerHTML=newText;
+    }
+    </script>
+<meta charset="ISO-8859-1">
+<title>Formular</title>
+</head>
+<body>
+<h1>Formular </h1> 
+<input type="text" id="inputtext"> 
+<input type="button" value="click here" onclick="manipulatealternative()">
+<div id="manipulate"> Hier wird der neue Text stehen</div>
+</body>
+</html>

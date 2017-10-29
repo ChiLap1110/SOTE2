@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>Aufgabe5d- Callbacks</title>
+<script type="text/javascript" src="jquery-3.2.1.min.js">
+</script>
+
+
+</head>
+<body>
+
+    <div id="hi">
+
+        <input type="button" value="Start" onclick="start()">
+
+    </div>
+<script type="text/javascript">
+
+
+function a(text){
+    alert(text);
+
+}
+
+function b(text){
+    alert(text);
+}
+
+
+function ausführen(aFunction,text){
+    aFunction(text);
+}
+
+function start(){
+    ausführen(a,"Ich bin a");
+    ausführen(b,"Ich bin b");
+
+
+}
+
+</script>
+
+
+</body>
+
+
+</html>

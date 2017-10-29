@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+    function rechner(){
+        var x = parseInt(document.getElementById("first").value);
+        var y = parseInt(document.getElementById("second").value);
+        var z = x + y;
+        document.getElementById("ausgabe").innerText=z;
+
+    }
+    </script>
+<meta charset="ISO-8859-1">
+<title>Calculator by Chi Lap Hong</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="text" id="first">
+    <input type="text" id="second">
+    <input type="button" id="start" value="ausrechnen" onclick="rechner()">
+    <div id="ausgabe">
+        Ergebnis
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    background-color:ivory;
+}
+img {
+   position: absolute;
+   right: 0;
+}
+
+th{
+    color: blue;
+    background-color: darkgrey;
+}
+
+h1,h2,h3 {
+    text-transform: uppercase
+}
+
+.Text1{
+    background-color: red;
+}
+
+
+p{
+    
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgabe 4a</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js">
+    </script>
+    <style>
+        #JQ1{
+            color: red;
+        }
+        .JQ {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="JQ1">
+        First Text JQ1
+    </p>
+
+    <p id="JQ2">
+        Second Text JQ2
+    </p>
+    <p id="JQ3">
+        Third Text JQ3
+    </p>
+
+    <script type="text/javascript">
+        function exchange() {
+            //without JQuery 
+            document.getElementById("JQ1").innerHTML = "New Text JQ1 without Jquery";
+
+            //with JQuery
+            $("#JQ2").html("New Text with JQuery");
+
+            $("#JQ3").append("New Text appended");
+         //   $("#JQ3").slideToggle();
+            $("#JQ2").addClass("JQ");
+
+        }
+
+    </script>
+
+    <input type="button" id="button" value="click here" onclick="exchange()">
+
+</body>
+
+
+
+
+</html>

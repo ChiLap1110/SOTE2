@@ -1,2 +1,3 @@
 # SOTE2
-Assignments
+
+Assignments of Software-Engineering 2

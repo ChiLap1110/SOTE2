@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+            <title>Aufgabe5b</title>
+            <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    </head>
+
+    <body>
+<p> Klicken, um ihre aktuelle Position zu erfahren</p>
+<input type="button" value="Ihre Position" onclick="getLocation()">
+<p id="para"></p>
+<script type="text/javascript">
+ 
+ function getLocation(){
+ if(navigator.geolocation){
+     navigator.geolocation.getCurrentPosition(showPosition);
+
+ };
+    }
+
+function showPosition(position){
+    $("#para").append(" Breitengrad: " + position.coords.latitude + "<br>Längengrad: "+ position.coords.longitude);
+}
+
+
+</script>
+
+
+
+    </body>
+</html>

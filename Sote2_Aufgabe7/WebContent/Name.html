@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Assignment 7</title>
+<script type="text/javascript">
+
+function makerequest() {
+	var inputdata = document.getElementById("inputdata");
+	var url = "http://localhost:8080/SOTE2_Aufgabe7/MyServlet?param=" + escape(inputdata.value);
+	var req;
+	if (window.XMLHttpRequest) {
+		req = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		req = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	req.onreadystatechange = function() {
+		if (req.readyState == 4) {
+			if (req.status == 200) {
+				var ergebnis = req.responseText;
+				document.getElementById("austausch").innerHTML = ergebnis;
+			}
+		}
+	};
+	req.open("GET", url, true);
+	req.send(null);
+}
+	
+</script>
+</head>
+<body>
+	<h1>Ajax Page</h1>
+	<form>
+		<p>
+			Namen eingeben : <input type="text" id="inputdata" onkeyup="makerequest()">
+		</p>
+		<p> Du tippst gerade</p>
+		<div id="austausch"></div>
+	</form>
+
+</body>
+</html>
